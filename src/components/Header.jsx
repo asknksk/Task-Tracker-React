@@ -9,7 +9,7 @@ import { useState } from "react";
 
 //? https://stackoverflow.com/questions/48563650/does-react-keep-the-order-for-state-updates
 
-const Header = () => {
+const Header = ({ tasks, setTasks }) => {
   const [show, setShow] = useState(false);
   const [btnStyle, setBtnStyle] = useState({
     name: "SHOW ADDTASK BAR",
@@ -39,10 +39,11 @@ const Header = () => {
         className="btn"
         onClick={handleShow}
         style={{ backgroundColor: btnStyle.bgColor }}
+        
       >
         {btnStyle.name}
       </button>
-      {show && <AddTaskForm />}
+      {show && <AddTaskForm tasks={tasks} setTasks={setTasks} />}
     </header>
   );
 };
