@@ -6,7 +6,7 @@
 
 body {
   height: 100vh;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
 }
 .container {
@@ -64,25 +64,15 @@ body {
   margin: 2rem 0;
 }
 
+.tasks {
+  margin: 2rem;
+  border-radius: 1rem;
+}
 .task {
-  background: #f4f4f4;
-  margin: 0.7rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-}
-
-.done {
-  border-left: 10px solid rgb(102, 18, 77);
-  text-decoration: line-through;
-  background-color: darkgrey;
-}
-
-.task h3 {
+  margin: 1rem auto;
+  background-color: #efead8;
+  border-radius: 1rem;
+  padding: 0.5rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-}
-
-.text-center {
-  text-align: center;
 }

@@ -9,8 +9,7 @@ import { useState } from "react";
 
 //? https://stackoverflow.com/questions/48563650/does-react-keep-the-order-for-state-updates
 
-const Header = ({ tasks, setTasks }) => {
-  const [show, setShow] = useState(false);
+const Header = ({ tasks, setTasks, setShow, show }) => {
   const [btnStyle, setBtnStyle] = useState({
     name: "SHOW ADDTASK BAR",
     bgColor: `purple`,
@@ -30,7 +29,7 @@ const Header = ({ tasks, setTasks }) => {
     }
     setShow(!show);
   };
-  console.log(show);
+  // console.log(show);
 
   return (
     <header className="header">
@@ -39,7 +38,6 @@ const Header = ({ tasks, setTasks }) => {
         className="btn"
         onClick={handleShow}
         style={{ backgroundColor: btnStyle.bgColor }}
-        
       >
         {btnStyle.name}
       </button>
